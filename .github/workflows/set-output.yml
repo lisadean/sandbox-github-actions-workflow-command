@@ -1,6 +1,9 @@
 name: set-output
 
-on: push
+on:
+  push:
+    paths:
+      - .github/workflows/set-output.yml
 
 jobs:
   build:

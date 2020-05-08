@@ -1,6 +1,9 @@
 name: set-env
 
-on: push
+on:
+  push:
+    paths:
+      - .github/workflows/set-env.yml
 
 jobs:
   build:
