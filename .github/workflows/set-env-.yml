@@ -1,0 +1,10 @@
+name: set-env
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo nju33 | xargs -I{} echo "::set-env name=NAME::{}"
+      - run: echo "$NAME"
