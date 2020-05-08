@@ -1,0 +1,12 @@
+name: debug
+
+on:
+  push:
+    paths:
+      - .github/workflows/debug.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo ::debug::debug-message

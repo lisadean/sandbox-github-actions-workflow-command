@@ -1,0 +1,13 @@
+name: warning
+
+on:
+  push:
+    paths:
+      - .github/workflows/warning.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-16.04
+    steps:
+      - run: echo ::warning::warning-message
+      - run: echo ::warning file=.github/workflows/warning.yml,line=10,col=14::ubuntu-18.04 使ってね

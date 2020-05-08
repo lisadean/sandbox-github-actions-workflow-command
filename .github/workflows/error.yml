@@ -1,0 +1,16 @@
+name: error
+
+on:
+  push:
+    paths:
+      - .github/workflows/error.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo ::error::error-message
+      - run: |
+          echo ::error file=.github/workflows/error.yml,line=16,col=7::実行されないステップ
+          exit 1
+      - run: echo foo
