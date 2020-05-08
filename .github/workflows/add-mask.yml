@@ -1,0 +1,12 @@
+name: add-mask
+
+on:
+  push:
+    paths:
+      - .github/workflows/add-mask.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo ::add-mask::foo
