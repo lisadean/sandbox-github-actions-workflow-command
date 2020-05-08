@@ -1,0 +1,17 @@
+name: stop-commands
+
+on:
+  push:
+    paths:
+      - .github/workflows/stop-commands.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: |
+          echo ::stop-commands::pause-logging
+          echo foo
+          echo bar
+          echo ::pause-logging::
+          echo baz
