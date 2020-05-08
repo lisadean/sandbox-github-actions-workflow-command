@@ -1,0 +1,18 @@
+name: set-output
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - id: org
+        run: echo "::set-output name=name::nju33-com"
+      - run: echo "${{ steps.org.outputs.name }}"
+
+      - id: repo
+        run: echo "::set-output name=name::${{ steps.org.outputs.name }}/sandbox-github-actions-workflow-command"
+      - uses: actions/checkout@v2
+        with:
+          repository: ${{ steps.repo.outputs.name }}
+      - run: ls
