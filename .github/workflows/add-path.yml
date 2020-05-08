@@ -1,0 +1,27 @@
+name: add-path
+
+on:
+  push:
+    paths:
+      - .github/workflows/add-path.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: |
+          yarn init -y
+          yarn add -D cowsay
+      - run: |
+          if command -v cowsay > /dev/null; then
+            cowsay Moo
+          else
+            echo cowsay: command not found
+          fi
+      - run: echo "::add-path::$(pwd)/node_modules/.bin"
+      - run: |
+          if command -v cowsay > /dev/null; then
+            cowsay Moo
+          else
+            echo cowsay: command not found
+          fi
