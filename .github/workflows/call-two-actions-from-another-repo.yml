@@ -1,0 +1,11 @@
+name: Test two actions
+on:
+  push:
+    branch:
+      -dummybranch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: managedkaos/github-actions-two-actions/action1@master
+      - uses: managedkaos/github-actions-two-actions/action2@master
