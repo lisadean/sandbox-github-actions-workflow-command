@@ -1,8 +1,8 @@
 name: Test two actions
 on:
   push:
-    branch:
-      -dummybranch
+    paths:
+      - .github/workflows/call-two-actions-from-another-repo.yml.yml
 jobs:
   build:
     runs-on: ubuntu-latest
