@@ -9,3 +9,4 @@ jobs:
     steps:
       - uses: managedkaos/github-actions-two-actions/action1@master
       - uses: managedkaos/github-actions-two-actions/action2@master
+      - uses: lisadean/the-sorting-hat@v1.2
