@@ -2,7 +2,7 @@ name: Test two actions
 on:
   push:
     paths:
-      - .github/workflows/call-two-actions-from-another-repo.yml.yml
+      - .github/workflows/call-two-actions-from-another-repo.yml
 jobs:
   build:
     runs-on: ubuntu-latest
